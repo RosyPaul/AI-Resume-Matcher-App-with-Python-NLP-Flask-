@@ -1,10 +1,10 @@
-AI Resume & Job Description Matching System
+#AI Resume & Job Description Matching System
 
 This project is an AI-powered Resume and Job Description Matching System built using Python, Machine Learning, and Flask. It automates the process of comparing resumes with job descriptions by calculating similarity scores using NLP techniques, helping recruiters quickly identify suitable candidates.
 
 The system focuses on practical recruitment automation by transforming unstructured text data into meaningful similarity insights.
 
-🚀 Features
+#🚀 Features
 
 Job Description Input – Recruiters can enter job descriptions directly into the system.
 
@@ -16,7 +16,7 @@ Similarity Score Generation – Displays percentage match between resume and job
 
 Responsive Web Interface – Clean and user-friendly interface built with Flask and Bootstrap.
 
-🛠️ Tech Stack
+#🛠️ Tech Stack
 
 Python – Core backend development
 
@@ -30,7 +30,7 @@ Bootstrap – Responsive frontend UI
 
 HTML/CSS – Web page structure and styling
 
-⚙️ How It Works
+#⚙️ How It Works
 
 User inputs a job description.
 
