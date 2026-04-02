@@ -61,7 +61,7 @@ def matcher():
         resume_vectors = vectors[1:]
         similarities = cosine_similarity([job_vector], resume_vectors)[0]
 
-        # Get top 3 resumes and their similarity scores
+        # Get top 5 resumes and their similarity scores
         top_indices = similarities.argsort()[-5:][::-1]
         top_resumes = [resume_files[i].filename for i in top_indices]
         similarity_scores = [round(similarities[i], 2) for i in top_indices]
@@ -73,4 +73,5 @@ def matcher():
 if __name__ == '__main__':
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
         os.makedirs(app.config['UPLOAD_FOLDER'])
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
