@@ -1,45 +1,105 @@
-# AI Resume & Job Description Matching System
+# 🤖 AI Resume Matcher App
 
-This project is an AI-powered Resume and Job Description Matching System built using Python, Machine Learning, and Flask. It automates the process of comparing resumes with job descriptions by calculating similarity scores using NLP techniques, helping recruiters quickly identify suitable candidates.
+An AI-powered resume matching tool built with Python, NLP, and Flask. Upload multiple resumes and a job description, and the app will rank the top 5 most suitable candidates using TF-IDF vectorization and cosine similarity.
 
-The system focuses on practical recruitment automation by transforming unstructured text data into meaningful similarity insights.
+---
 
-# 🚀 Features
+## 🚀 Live Demo
 
-Job Description Input – Recruiters can enter job descriptions directly into the system.
+> https://ai-resume-matcher-app-with-python-nlp.onrender.com
 
-Resume Upload – Candidates can upload resumes for automated evaluation.
+---
 
-NLP-Based Matching Algorithm – Uses text preprocessing, vectorization (TF-IDF), and cosine similarity to compute match scores.
+## 📌 Features
 
-Similarity Score Generation – Displays percentage match between resume and job description.
+- Upload multiple resumes (PDF, DOCX, TXT)
+- Paste any job description
+- Automatically extracts and analyzes resume text
+- Ranks top 5 matching resumes using NLP
+- Simple and clean web interface
 
-Responsive Web Interface – Clean and user-friendly interface built with Flask and Bootstrap.
+---
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Python – Core backend development
+| Layer | Technology |
+|---|---|
+| Backend | Python, Flask |
+| NLP | scikit-learn (TF-IDF, Cosine Similarity) |
+| File Parsing | PyPDF2, docx2txt |
+| Frontend | HTML, CSS (Jinja2 Templates) |
+| Deployment | Render |
 
-Flask – Web framework for handling routes and server logic
 
-Scikit-learn – TF-IDF vectorization and cosine similarity
+---
 
-NLP Techniques – Text preprocessing and feature extraction
+## 📁 Project Structure
+AI-Resume-Matcher/
+├── templates/
+│   └── matches_resume.html
+├── uploads/
+├── main.py
+├── requirements.txt
+├── Procfile
+├── .gitignore
+└── README.md
 
-Bootstrap – Responsive frontend UI
+## ⚙️ How It Works
 
-HTML/CSS – Web page structure and styling
+1. User uploads one or more resumes (PDF/DOCX/TXT)
+2. User pastes a job description
+3. App extracts text from all uploaded files
+4. TF-IDF vectorizer converts text into numerical vectors
+5. Cosine similarity is calculated between the job description and each resume
+6. Top 5 matching resumes are returned with similarity scores
 
-# ⚙️ How It Works
+---
 
-User inputs a job description.
+## 🧪 Running Locally
 
-User uploads a resume.
+1. Clone the repository
+git clone https://github.com/RosyPaul/AI-Resume-Matcher-App-with-Python-NLP-Flask-.git
+cd AI-Resume-Matcher-App-with-Python-NLP-Flask-
 
-The system preprocesses both texts (cleaning, tokenization).
+2. Install dependencies
+pip install -r requirements.txt
 
-Texts are converted into numerical vectors using TF-IDF.
+3. Run the app
+python main.py
 
-Cosine similarity is calculated.
+4. Open in browser
+http://localhost:5000
 
-The final similarity score is displayed.
+---
+
+## 📦 Requirements
+
+flask
+docx2txt
+PyPDF2
+scikit-learn
+
+---
+
+## 🌐 Deployment
+
+This app is deployed on Render. To deploy your own instance:
+1. Push your code to GitHub
+2. Go to render.com and create a new Web Service
+3. Connect your GitHub repo
+4. Set build command: pip install -r requirements.txt
+5. Set start command: python main.py
+6. Deploy!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 🙋‍♀️ Author
+
+Rosy Paul
+GitHub: https://github.com/RosyPaul
